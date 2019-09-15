@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Document</title>
+        <link rel="stylesheet" type="text/css" href="style.css" />
+    </head>
+    <body>
+        <header class="header">
+            <div class="logo-container">
+                <img class="logo" src="./assets/hero.png" />
+            </div>
+            <div class="data-placeholder"></div>
+            <div class="avatar-container">
+                <img class="avatar" src="./assets/avatar.jpg" />
+            </div>
+        </header>
+        <main class="main">
+            <nav class="nav">
+                <div class="nav-content">
+                    <ul class="nav-list">
+                        <li class="nav-item"><h2>Dashboard</h2></li>
+                        <li class="nav-item selected">
+                            <h2>Quote</h2>
+                        </li>
+                        <li class="nav-item">
+                            <ul class="nav-inner-list">
+                                <li class="nav-inner-item selected">New Quote</li>
+                                <li class="nav-inner-item">Load Saved Quote</li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><h2>Insured Lookup</h2></li>
+                        <li class="nav-item"><h2>Retention</h2></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="form-container">
+                <h2 class="form-heading">Quote Workflow</h2>
+                <div class="form-content">
+                    <div class="nav-sub">
+                        <div class="nav-content">
+                            <ul class="nav-list">
+                                <li class="nav-item"><h2>Item One</h2></li>
+                                <li class="nav-item">
+                                    <h2>Item Two</h2>
+                                </li>
+                                <li class="nav-item selected">
+                                    <h2>Item Three</h2>
+                                </li>
+                                <li class="nav-item">
+                                    <ul class="nav-inner-list">
+                                        <li class="nav-inner-item">Sub-Item 3.1</li>
+                                        <li class="nav-inner-item selected">Sub-Item 3.1</li>
+                                        <li class="nav-inner-item">Sub-Item 3.1</li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item"><h2>Item Four</h2></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="form-questions">
+                        <form class="form">
+                            <div class="question-container">
+                                <p class="question">Do Employees use their vehicles in business?</p>
+                                <div class="radio-selector">
+                                    <input
+                                        type="radio"
+                                        id="question1-yes"
+                                        name="question1"
+                                        value="true"
+                                        onclick="checkRadioOne()"
+                                        required
+                                    />
+                                    <label for="question1-yes">Yes</label>
+                                </div>
+                                <div class="radio-selector">
+                                    <input
+                                        type="radio"
+                                        id="question1-no"
+                                        name="question1"
+                                        value="false"
+                                        onclick="checkRadioOne()"
+                                        checked
+                                    />
+                                    <label for="question1-no">No</label>
+                                </div>
+                            </div>
+                            <div id="question1-sub" class="question-container hidden">
+                                <p class="question">How Many?</p>
+                                <select required>
+                                    <option value="">Please Choose</option>
+                                    <option value="1">Under 50%</option>
+                                    <option value="2">Over 50%</option>
+                                </select>
+                            </div>
+
+                            <div class="question-container">
+                                <p class="question">
+                                    With the exception of encumbrances, are any vehicles for which insurance is
+                                    requested NOT sole owned by and registered to the applicant?
+                                </p>
+                                <div class="radio-selector">
+                                    <input
+                                        type="radio"
+                                        id="question2-yes"
+                                        name="question2"
+                                        value="true"
+                                        onclick="checkRadioTwo()"
+                                        required
+                                    />
+                                    <label for="question2-yes">Yes</label>
+                                </div>
+                                <div class="radio-selector">
+                                    <input
+                                        type="radio"
+                                        id="question2-no"
+                                        name="question2"
+                                        value="false"
+                                        onclick="checkRadioTwo()"
+                                        checked
+                                    />
+                                    <label for="question2-no">No</label>
+                                </div>
+                            </div>
+
+                            <div id="question2-sub" class="question-container hidden">
+                                <p class="question">Are all owners listed in the vehicles section?</p>
+                                <div class="radio-selector">
+                                    <input type="radio" id="question2.1-yes" name="question2.1" value="true" />
+                                    <label for="question2.1-yes">Yes</label>
+                                </div>
+                                <div class="radio-selector">
+                                    <input type="radio" id="question3-no" name="question2.1" value="false" />
+                                    <label for="question2-no">No</label>
+                                </div>
+                            </div>
+                            <div class="question-container">
+                                <p class="question">Any of the following electronic monitoring devices in vehicles?</p>
+                                <div>
+                                    <input type="checkbox" id="monitor" name="question4" />
+                                    <label for="monitor">Monitor Driver Safety</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" id="monitor" name="question4" />
+                                    <label for="monitor">Navigation</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" id="monitor" name="question4" />
+                                    <label for="monitor">Track Fuel Consumption</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" id="monitor" name="question4" />
+                                    <label for="monitor">Monitor Vehicle Maint.</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" id="monitor" name="question4" />
+                                    <label for="monitor">Mileage Tracking</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" id="monitor" name="question4" />
+                                    <label for="monitor">Location Tracking</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" id="monitor" name="question4" />
+                                    <label for="monitor">Other</label>
+                                </div>
+                                <p class="question">Please Explain:</p>
+                                <textarea rows="4"></textarea>
+                                <p class="question">Percentage of fleet:</p>
+                                <div class="slidecontainer">
+                                    <p class="slider-value">50%</p>
+                                    <input
+                                        class="slider"
+                                        type="range"
+                                        min="1"
+                                        max="100"
+                                        value="50"
+                                        class="slider"
+                                        id="myRange"
+                                        onchange="setSliderPercent()"
+                                    />
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="form-navigation">
+                    <button class="btn btn--grey">< Back</button>
+                    <button class="btn btn--blue">Next ></button>
+                </div>
+            </div>
+        </main>
+        <footer class="footer">
+            <ul class="footer-list">
+                <li class="footer-item"><a href="#">Home</a></li>
+                <li class="footer-item"><a href="#">Terms</a></li>
+                <li class="footer-item"><a href="#">Privacy</a></li>
+                <li class="footer-item"><a href="#">Stuff</a></li>
+            </ul>
+        </footer>
+        <script src="script.js"></script>
+    </body>
+</html>
